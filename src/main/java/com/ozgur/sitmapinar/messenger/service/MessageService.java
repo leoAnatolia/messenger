@@ -29,6 +29,7 @@ public class MessageService {
     public Message addMessage(Message message) {
         message.setId(this.messages.size() + 1);
         this.messages.put(message.getId(), message);
+
         return message;
 
     }
@@ -40,6 +41,7 @@ public class MessageService {
         }
 
         this.messages.put(message.getId(), message);
+        System.out.println("msg before update return:" + message);
         return message;
 
     }
